@@ -1,0 +1,7 @@
+@mixin fonts($fsize, $fweight) {
+  font-family: 'Figtree', sans-serif;
+  font-optical-sizing: auto;
+  font-size: $fsize;
+  font-style: normal;
+  font-weight: $fweight;
+}

@@ -1,0 +1,171 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Set the sizing of an element to include it's border */
+}
+
+* {
+  margin: 0; /* Set the default margin to 0 */
+  padding: 0; /* Set the default padding to 0 */
+}
+
+ul[role=list],
+ol[role=list] {
+  list-style: none; /* Turn off numbered and unordered list decoration */
+}
+
+html:focus-within {
+  scroll-behavior: smooth; /* Make the scrolling inside of any scrollable element smooth */
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto; /* Makes link undelines look better */
+}
+
+img,
+picture,
+svg,
+video,
+canvas {
+  max-width: 100%; /* Makes it responsive */
+  height: auto; /* Makes it responsive */
+  vertical-align: middle; /* Makes text next to inline images look better */
+  font-style: italic; /* If the images don't load it makes the alt decription look better */
+  background-repeat: no-repeat;
+  /* The background repeat and size are there if you want to load a picture first like a backroung image that is worse quality while the better quality image loads */
+  background-size: cover;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit; /* Makes these elements inherit fonts */
+}
+
+/* Turns off animation for people who don't want to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transition: none;
+  }
+}
+body,
+html {
+  height: 100%; /* Makes the body element full screen */
+  scroll-behavior: smooth; /* Makes normal scrolling smooth */
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  background-color: hsl(47, 88%, 63%);
+  line-height: 1.5;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .card {
+  max-width: 38.4rem;
+  padding: 2.4rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 2rem;
+  box-shadow: 8px 8px 0 0 rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.container .card .blog-image {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.container .card .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.container .card .content .metadata {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: start;
+}
+.container .card .content .metadata a:link,
+.container .card .content .metadata a:visited {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 800;
+  display: inline-block;
+  background-color: hsl(47, 88%, 63%);
+  text-decoration: none;
+  color: hsl(0, 0%, 7%);
+  padding: 0.4rem 1.2rem;
+  border-radius: 0.4rem;
+}
+.container .card .content .metadata .publishdate {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 500;
+  display: block;
+}
+.container .card .content .title {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 800;
+  cursor: pointer;
+}
+.container .card .content .title:hover,
+.container .card .content .title:active {
+  color: hsl(47, 88%, 63%);
+}
+.container .card .content .description {
+  color: hsl(0, 0%, 50%);
+}
+.container .card .author {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+.container .card .author img {
+  width: 32px;
+}
+.container .card .author .authorname {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 800;
+}
+
+@media (width < 375px) {
+  .container {
+    min-width: 32.7rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
